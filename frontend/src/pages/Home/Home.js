@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaPlay, FaIndustry, FaProjectDiagram, FaSmile, FaShieldAlt, FaQuoteLeft } from 'react-icons/fa';
 import CountUp from 'react-countup';
