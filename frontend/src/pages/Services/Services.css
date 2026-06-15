@@ -1,0 +1,106 @@
+.service-group-section { background: var(--white); }
+.service-group-section:nth-child(odd) { background: var(--off-white); }
+
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.sp-card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.sp-img {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+}
+
+.sp-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sp-card:hover .sp-img img { transform: scale(1.07); }
+
+.sp-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(26,43,74,0.1), rgba(26,43,74,0.6));
+}
+
+.sp-emoji {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  font-size: 26px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.sp-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sp-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+.sp-desc {
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* CTA */
+.services-cta {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  padding: 64px 0;
+}
+
+.services-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.services-cta-inner h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.services-cta-inner p { color: rgba(255,255,255,0.7); font-size: 15px; }
+
+@media (max-width: 1024px) { .sp-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .sp-grid { grid-template-columns: 1fr; }
+  .services-cta-inner { flex-direction: column; text-align: center; }
+}
